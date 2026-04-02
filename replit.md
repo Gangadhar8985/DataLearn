@@ -4,6 +4,12 @@
 
 pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
 
+## Artifacts
+
+- **data-learning-hub** (`artifacts/data-learning-hub`) — Static React + Vite website covering Power BI, SQL, and Python. Includes syntax guides, code examples, best practices, and dark mode. Served at `/` (root).
+  - Pages: Home, Power BI (DAX, Power Query, Data Modeling, Visualizations), SQL (SELECT, JOINs, Aggregations, CTEs, Window Functions, DDL), Python (Basics, pandas, NumPy, Data Cleaning, Visualization, File Handling)
+  - No backend — fully static frontend
+
 ## Stack
 
 - **Monorepo tool**: pnpm workspaces

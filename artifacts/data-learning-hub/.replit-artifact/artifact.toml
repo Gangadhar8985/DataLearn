@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Data Learning Hub"
+version = "1.0.0"
+id = "artifacts/data-learning-hub"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21789
+
+[services.development]
+run = "pnpm --filter @workspace/data-learning-hub run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/data-learning-hub", "run", "build" ]
+publicDir = "artifacts/data-learning-hub/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21789"
+BASE_PATH = "/"
